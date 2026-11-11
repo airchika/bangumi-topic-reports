@@ -23,7 +23,9 @@ h1 { font-size:26px; margin:0 0 6px; letter-spacing:.02em; }
 .tab:hover { border-color:#b9c4d8; color:var(--ink); }
 .tab.active { background:var(--accent); border-color:var(--accent); color:#fff; }
 .timeline { display:flex; align-items:center; gap:14px; padding:0 2px 6px; }
-.play, .arrow { width:34px; height:34px; border-radius:50%; border:1px solid var(--line); background:var(--tab-bg); color:var(--ink); cursor:pointer; font-size:13px; }
+.nav-group { display:flex; align-items:center; gap:4px; }
+.play, .arrow { width:34px; height:34px; border-radius:50%; border:1px solid var(--line); background:var(--tab-bg); color:var(--ink); cursor:pointer; font-size:16px; line-height:1; }
+.play { font-size:13px; }
 .play:hover, .arrow:hover { background:var(--hover); }
 .arrow:disabled { opacity:.35; cursor:default; }
 .arrow:disabled:hover { background:var(--tab-bg); }
@@ -61,9 +63,11 @@ input[type=range] { flex:1; accent-color:var(--accent); }
     <div class="tabs" id="tabs"></div>
     <div class="timeline">
       <button class="play" id="play">▶</button>
-      <button class="arrow" id="prev" aria-label="上一个月">‹</button>
+      <div class="nav-group">
+        <button class="arrow" id="prev" aria-label="上一个月">←</button>
+        <button class="arrow" id="next" aria-label="下一个月">→</button>
+      </div>
       <input type="range" id="slider" min="0" max="0" value="0" step="1">
-      <button class="arrow" id="next" aria-label="下一个月">›</button>
       <div class="month" id="month">—</div>
     </div>
     <div class="meta" id="meta"></div>

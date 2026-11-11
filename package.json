@@ -1,0 +1,13 @@
+{
+  "name": "bangumi-topic-reports",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "check:deploy": "wrangler deploy --dry-run"
+  },
+  "devDependencies": {
+    "wrangler": "4.160.0"
+  }
+}
